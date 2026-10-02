@@ -1,0 +1,307 @@
+/* =========================================================
+   KAIF PORTFOLIO - UI STYLES
+   Dark futuristic BIOS / portfolio interface
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-family: "Courier New", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #e8f7ff;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+/* ---------------------------------------------------------
+   Responsive typography
+   --------------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+}
+
+/* ---------------------------------------------------------
+   Line breaks
+   --------------------------------------------------------- */
+
+br {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 16px;
+}
+
+/* ---------------------------------------------------------
+   Loading animation
+   --------------------------------------------------------- */
+
+.loading::after {
+    display: inline-block;
+    animation: dotty steps(1, end) 1s infinite;
+    content: "";
+}
+
+@keyframes dotty {
+    0% {
+        content: "   ";
+    }
+
+    25% {
+        content: ". ";
+    }
+
+    50% {
+        content: ".. ";
+    }
+
+    75% {
+        content: "...";
+    }
+
+    100% {
+        content: "   ";
+    }
+}
+
+/* ---------------------------------------------------------
+   Futuristic blinking cursor
+   --------------------------------------------------------- */
+
+.blinking-cursor {
+    background-color: #00e5ff;
+    width: 0.8em;
+    height: 0.15em;
+
+    -webkit-animation: 0.65s blink step-end infinite;
+    -moz-animation: 0.65s blink step-end infinite;
+    -ms-animation: 0.65s blink step-end infinite;
+    -o-animation: 0.65s blink step-end infinite;
+
+    animation: 0.65s blink step-end infinite;
+
+    box-shadow:
+        0 0 6px #00e5ff,
+        0 0 12px rgba(0, 229, 255, 0.5);
+}
+
+@keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    50% {
+        background-color: #00e5ff;
+        box-shadow:
+            0 0 6px #00e5ff,
+            0 0 12px rgba(0, 229, 255, 0.5);
+    }
+}
+
+@-moz-keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    50% {
+        background-color: #00e5ff;
+        box-shadow:
+            0 0 6px #00e5ff,
+            0 0 12px rgba(0, 229, 255, 0.5);
+    }
+}
+
+@-webkit-keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    50% {
+        background-color: #00e5ff;
+        box-shadow:
+            0 0 6px #00e5ff,
+            0 0 12px rgba(0, 229, 255, 0.5);
+    }
+}
+
+@-ms-keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    50% {
+        background-color: #00e5ff;
+        box-shadow:
+            0 0 6px #00e5ff,
+            0 0 12px rgba(0, 229, 255, 0.5);
+    }
+}
+
+@-o-keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    50% {
+        background-color: #00e5ff;
+        box-shadow:
+            0 0 6px #00e5ff,
+            0 0 12px rgba(0, 229, 255, 0.5);
+    }
+}
+
+/* ---------------------------------------------------------
+   BIOS Start Button
+   --------------------------------------------------------- */
+
+.bios-start-button {
+    background-color: rgba(3, 8, 18, 0.96);
+
+    border: 2px solid #00e5ff;
+    border-radius: 4px;
+
+    box-shadow:
+        0 0 8px rgba(0, 229, 255, 0.35),
+        inset 0 0 12px rgba(0, 229, 255, 0.06);
+
+    transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.bios-start-button p {
+    box-sizing: border-box;
+    padding: 10px 18px;
+
+    color: #00e5ff;
+
+    font-family: "Courier New", monospace;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.bios-start-button:hover {
+    background-color: #07131f;
+
+    box-shadow:
+        0 0 12px rgba(0, 229, 255, 0.65),
+        0 0 28px rgba(0, 229, 255, 0.2);
+
+    transform: translateY(-1px);
+}
+
+.bios-start-button:hover p {
+    background-color: #00e5ff;
+
+    cursor: pointer;
+
+    color: #02060c;
+}
+
+/* ---------------------------------------------------------
+   Loading Screen
+   --------------------------------------------------------- */
+
+.loading-screen-header {
+    padding: 48px;
+
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 6px rgba(0, 229, 255, 0.45);
+}
+
+.loading-screen-body {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.loading-screen-footer {
+    padding: 48px;
+    padding-bottom: 64px;
+}
+
+/* ---------------------------------------------------------
+   Information Overlay
+   --------------------------------------------------------- */
+
+.info-wrapper {
+    top: 64px;
+    left: 64px;
+
+    color: #e8f7ff;
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+
+    .loading-screen-header {
+        padding: 16px;
+    }
+
+    .info-wrapper {
+        top: 16px;
+        left: 16px;
+    }
+
+    .blinking-cursor {
+        background-color: #00e5ff;
+
+        width: 0.4em;
+        height: 0.08em;
+
+        -webkit-animation: 0.65s blink step-end infinite;
+        -moz-animation: 0.65s blink step-end infinite;
+        -ms-animation: 0.65s blink step-end infinite;
+        -o-animation: 0.65s blink step-end infinite;
+
+        animation: 0.65s blink step-end infinite;
+    }
+
+    .loading-screen-body {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .loading-screen-footer {
+        padding: 16px;
+        padding-bottom: 32px;
+    }
+
+    .bios-start-button p {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+}

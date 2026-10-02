@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KONDAKAMARLA MOHAMMED KAIF | Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(0, 229, 255, 0.10),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom left,
+                    rgba(123, 92, 255, 0.10),
+                    transparent 35%
+                ),
+                #05070d;
+
+            color: #eaf7ff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           TOP NAVIGATION
+           ========================= */
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            padding: 14px 24px;
+
+            background: rgba(5, 7, 13, 0.92);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+        }
+
+        .nav-inner {
+            max-width: 1150px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #00e5ff;
+            font-family: "Courier New", monospace;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #9db5c5;
+            font-size: 13px;
+
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00e5ff;
+        }
+
+        /* =========================
+           MAIN
+           ========================= */
+
+        main {
+            max-width: 1150px;
+            margin: auto;
+            padding: 40px 24px 80px;
+        }
+
+        section {
+            margin-bottom: 70px;
+            scroll-margin-top: 80px;
+        }
+
+        /* =========================
+           HERO
+           ========================= */
+
+        .hero {
+            min-height: 85vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 50px 0;
+        }
+
+        .terminal-label {
+            color: #00e5ff;
+            font-family: "Courier New", monospace;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .terminal-label::before {
+            content: "> ";
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 7vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #00e5ff,
+                #9c7cff
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero h2 {
+            font-size: clamp(18px, 3vw, 30px);
+            color: #b7c9d5;
+            font-weight: 400;
+            margin-bottom: 22px;
+        }
+
+        .hero-description {
+            max-width: 760px;
+            color: #8fa6b5;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 12px 20px;
+
+            border: 1px solid #00e5ff;
+            border-radius: 6px;
+
+            color: #00e5ff;
+
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+
+            transition: 0.25s ease;
+        }
+
+        .button:hover {
+            background: #00e5ff;
+            color: #031018;
+
+            box-shadow:
+                0 0 15px rgba(0, 229, 255, 0.45);
+        }
+
+        .button.primary {
+            background: #00e5ff;
+            color: #031018;
+        }
+
+        .button.primary:hover {
+            background: #8df4ff;
+        }
+
+        /* =========================
+           SECTION HEADINGS
+           ========================= */
+
+        .section-title {
+            font-family: "Courier New", monospace;
+            color: #00e5ff;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .section-title::before {
+            content: "// ";
+            color: #647887;
+        }
+
+        .section-subtitle {
+            color: #728997;
+            margin-bottom: 28px;
+        }
+
+        /* =========================
+           CARDS
+           ========================= */
+
+        .card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(14, 24, 35, 0.95),
+                    rgba(7, 12, 20, 0.95)
+                );
+
+            border: 1px solid rgba(0, 229, 255, 0.14);
+
+            border-radius: 10px;
+
+            padding: 24px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.25);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+
+            border-color: rgba(0, 229, 255, 0.45);
+        }
+
+        .card h3 {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #8fa6b5;
+        }
+
+        /* =========================
+           ABOUT
+           ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 24px;
+        }
+
+        .profile-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 280px;
+
+            border: 1px solid rgba(0, 229, 255, 0.15);
+            border-radius: 10px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0, 229, 255, 0.08),
+                    transparent 65%
+                );
+        }
+
+        .profile-placeholder {
+            width: 150px;
+            height: 150px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 2px solid #00e5ff;
+
+            color: #00e5ff;
+
+            font-family: "Courier New", monospace;
+            font-size: 34px;
+
+            box-shadow:
+                0 0 25px rgba(0, 229, 255, 0.25);
+        }
+
+        /* =========================
+           PROJECTS
+           ========================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            min-height: 300px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-number {
+            color: #00e5ff;
+            font-family: "Courier New", monospace;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 22px;
+        }
+
+        .project-card p {
+            margin-bottom: 18px;
+        }
+
+        .tech {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+
+            margin-top: auto;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            padding: 5px 9px;
+
+            border: 1px solid rgba(0, 229, 255, 0.22);
+            border-radius: 4px;
+
+            color: #8eeeff;
+
+            font-size: 11px;
+            font-family: "Courier New", monospace;
+        }
+
+        /* =========================
+           EXPERIENCE
+           ========================= */
+
+        .experience {
+            display: grid;
+            gap: 18px;
+        }
+
+        .experience-card {
+            border-left: 3px solid #00e5ff;
+        }
+
+        .date {
+            color: #00e5ff;
+            font-family: "Courier New", monospace;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            color: #8298a5;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           SKILLS
+           ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-top: 15px;
+        }
+
+        .skill {
+            padding: 7px 10px;
+
+            background: rgba(0, 229, 255, 0.05);
+
+            border: 1px solid rgba(0, 229, 255, 0.16);
+
+            border-radius: 5px;
+
+            color: #b9d4df;
+
+            font-size: 12px;
+        }
+
+        /* =========================
+           EDUCATION / CERTIFICATIONS
+           ========================= */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .item {
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item strong {
+            color: #ffffff;
+        }
+
+        .item span {
+            display: block;
+            color: #8197a5;
+            font-size: 13px;
+        }
+
+        /* =========================
+           CONTACT
+           ========================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .contact-link {
+            display: block;
+
+            padding: 18px;
+
+            border: 1px solid rgba(0, 229, 255, 0.14);
+            border-radius: 8px;
+
+            color: #b9d4df;
+
+            transition: 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: #00e5ff;
+
+            border-color: #00e5ff;
+
+            background: rgba(0, 229, 255, 0.04);
+        }
+
+        .contact-label {
+            display: block;
+
+            color: #617987;
+
+            font-size: 11px;
+
+            font-family: "Courier New", monospace;
+
+            margin-bottom: 4px;
+        }
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+            padding-top: 30px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+            color: #526b79;
+
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+
+            text-align: center;
+        }
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .about-grid,
+            .projects,
+            .skills-grid,
+            .two-column,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 60px 0;
+            }
+
+            main {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            section {
+                margin-bottom: 55px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
+
+    <nav class="nav">
+        <div class="nav-inner">
+
+            <div class="logo">
+                KAIF.DEV
+            </div>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+             ========================= -->
+
+        <section class="hero">
+
+            <div class="terminal-label">
+                SYSTEM ONLINE
+            </div>
+
+            <h1>
+                KONDAKAMARLA<br>
+                MOHAMMED KAIF
+            </h1>
+
+            <h2>
+                Full Stack Developer |
+                Cybersecurity Enthusiast |
+                AI/ML Enthusiast
+            </h2>
+
+            <p class="hero-description">
+                I'm a Full Stack Developer and AI/ML enthusiast who enjoys
+                building practical applications, solving technical problems,
+                and exploring cybersecurity. I focus on turning ideas into
+                functional, user-friendly solutions.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    class="button primary"
+                    href="#projects"
+                >
+                    VIEW PROJECTS
+                </a>
+
+                <a
+                    class="button"
+                    href="mailto:mrkaif1309@gmail.com"
+                >
+                    CONTACT ME
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+             ========================= -->
+
+        <section id="about">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <p class="section-subtitle">
+                Developer profile
+            </p>
+
+            <div class="about-grid">
+
+                <div class="profile-box">
+
+                    <div class="profile-placeholder">
+                        MK
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>
+                        Hello, I'm Kaif.
+                    </h3>
+
+                    <p>
+                        I'm a Full Stack Developer and AI/ML enthusiast
+                        interested in building practical applications,
+                        solving technical problems, and exploring
+                        cybersecurity.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        My technical interests include web development,
+                        machine learning, computer vision, cybersecurity,
+                        and intelligent systems.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        I enjoy working on projects that combine software
+                        development with real-world problem solving.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+             ========================= -->
+
+        <section id="projects">
+
+            <h2 class="section-title">
+                Projects
+            </h2>
+
+            <p class="section-subtitle">
+                Selected projects and technical work
+            </p>
+
+            <div class="projects">
+
+                <!-- Sky Lord -->
+
+                <div class="card project-card">
+
+                    <div class="project-number">
+                        PROJECT_01
+                    </div>
+
+                    <h3>
+                        Sky Lord
+                    </h3>
+
+                    <p>
+                        AI-powered search and rescue drone system using
+                        YOLOv5 and AirSim for real-time survivor detection,
+                        autonomous navigation, GPS timestamps and map-based
+                        location visualization.
+                    </p>
+
+                    <div class="tech">
+                        <span class="tag">Python</span>
+                        <span class="tag">YOLOv5</span>
+                        <span class="tag">AirSim</span>
+                        <span class="tag">Folium</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+
+                    <a
+                        class="button"
+                        href="https://github.com/kafkakaif/AI_Drone_SearchRescue"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        VIEW PROJECT
+                    </a>
+
+                </div>
+
+
+                <!-- Churn Guard -->
+
+                <div class="card project-card">
+
+                    <div class="project-number">
+                        PROJECT_02
+                    </div>
+
+                    <h3>
+                        Churn Guard
+                    </h3>
+
+                    <p>
+                        Machine-learning based customer churn prediction
+                        system using multiple classification models,
+                        SMOTE-based imbalance handling, feature importance
+                        and a real-time dashboard.
+                    </p>
+
+                    <div class="tech">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">SMOTE</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+
+                    <a
+                        class="button"
+                        href="https://github.com/kafkakaif/Churn-Guard"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        VIEW PROJECT
+                    </a>
+
+                </div>
+
+
+                <!-- AMIRA -->
+
+                <div class="card project-card">
+
+                    <div class="project-number">
+                        PROJECT_03
+                    </div>
+
+                    <h3>
+                        AMIRA
+                    </h3>
+
+                    <p>
+                        E-commerce website featuring authentication,
+                        product catalog, shopping cart, order management
+                        and an administrative dashboard.
+                    </p>
+
+                    <div class="tech">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+
+                    <a
+                        class="button"
+                        href="https://amira-ecommerce-website.onrender.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LIVE PROJECT
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCE
+             ========================= -->
+
+        <section id="experience">
+
+            <h2 class="section-title">
+                Experience
+            </h2>
+
+            <p class="section-subtitle">
+                Internships and technical training
+            </p>
+
+            <div class="experience">
+
+
+                <div class="card experience-card">
+
+                    <div class="date">
+                        30 DAYS
+                    </div>
+
+                    <h3>
+                        Web Development Intern
+                    </h3>
+
+                    <div class="company">
+                        CodeBind Technologies — Chennai
+                    </div>
+
+                    <p>
+                        Worked on responsive frontend and using HTML, CSS, JavaScript,
+                        Bootstrap and SQL.
+                    </p>
+
+                </div>
+
+
+                <div class="card experience-card">
+
+                    <div class="date">
+                        2 MONTHS
+                    </div>
+
+                    <h3>
+                        Machine Learning Intern
+                    </h3>
+
+                    <div class="company">
+                        Slash Mark
+                    </div>
+
+                    <p>
+                        Worked on machine-learning workflows including
+                        data preprocessing, feature engineering,
+                        model development and hyperparameter tuning
+                        using Python.
+                    </p>
+
+                </div>
+
+
+                <div class="card experience-card">
+
+                    <div class="date">
+                        2 MONTHS
+                    </div>
+
+                    <h3>
+                        Python Full Stack Trainee
+                    </h3>
+
+                    <div class="company">
+                        Ethno Tech
+                    </div>
+
+                    <p>
+                        Worked on full-stack application development
+                        using Python, Django, React, HTML, CSS,
+                        JavaScript, SQL and MongoDB.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+             ========================= -->
+
+        <section id="skills">
+
+            <h2 class="section-title">
+                Technical Skills
+            </h2>
+
+            <p class="section-subtitle">
+                Technologies and areas of interest
+            </p>
+
+            <div class="skills-grid">
+
+
+                <div class="card">
+
+                    <h3>
+                        Development
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span class="skill">Python</span>
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Django</span>
+                        <span class="skill">Bootstrap</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        AI / Machine Learning
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span class="skill">Scikit-learn</span>
+                        <span class="skill">XGBoost</span>
+                        <span class="skill">Machine Learning</span>
+                        <span class="skill">Regression</span>
+                        <span class="skill">SVM</span>
+                        <span class="skill">ANN</span>
+                        <span class="skill">YOLOv5</span>
+                        <span class="skill">NLP</span>
+                        <span class="skill">Sentence-BERT</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Databases
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span class="skill">SQL</span>
+                        <span class="skill">MongoDB</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Cybersecurity
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span class="skill">Linux</span>
+                        <span class="skill">TryHackMe</span>
+                        <span class="skill">CTF</span>
+                        <span class="skill">Security Activities</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Tools & Technologies
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span class="skill">Git</span>
+                        <span class="skill">AirSim</span>
+                        <span class="skill">Folium</span>
+                        <span class="skill">Windows</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION
+             ========================= -->
+
+        <section id="education">
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+            <p class="section-subtitle">
+                Academic background
+            </p>
+
+            <div class="two-column">
+
+                <div class="card">
+
+                    <h3>
+                        B.Tech
+                    </h3>
+
+                    <div class="item">
+
+                        <strong>
+                            Madanapalle Institute of Technology & Science
+                        </strong>
+
+                        <span>
+                            CSE (Cyber Security)
+                        </span>
+
+                        <span>
+                            CGPA: 8.0
+                        </span>
+
+                        <span>
+                            Aug 2023 – Jul 2027
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Higher Secondary
+                    </h3>
+
+                    <div class="item">
+
+                        <strong>
+                            Blue Moon Junior College
+                        </strong>
+
+                        <span>
+                            Percentage: 85%
+                        </span>
+
+                        <span>
+                            2023
+                        </span>
+
+                    </div>
+
+                    <div class="item">
+
+                        <strong>
+                            Sree Valmeeki High School
+                        </strong>
+
+                        <span>
+                            Percentage: 100%
+                        </span>
+
+                        <span>
+                            2021
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CERTIFICATIONS
+             ========================= -->
+
+        <section>
+
+            <h2 class="section-title">
+                Certifications
+            </h2>
+
+            <p class="section-subtitle">
+                Courses and achievements
+            </p>
+
+            <div class="card">
+
+                <div class="item">
+
+                    <strong>
+                        Python Essentials 1
+                    </strong>
+
+                    <span>
+                        Cisco Networking Academy — 2026
+                    </span>
+
+                </div>
+
+
+                <div class="item">
+
+                    <strong>
+                        Big Data Computing — Elite
+                    </strong>
+
+                    <span>
+                        NPTEL / IIT Kanpur — 2025 | 79%
+                    </span>
+
+                </div>
+
+
+                <div class="item">
+
+                    <strong>
+                        MAKEFORMADANAPALLE
+                    </strong>
+
+                    <span>
+                        2-Day Make-a-thon — Titan Design Impact Movement, MITS | Oct 2025
+                    </span>
+
+                </div>
+
+
+                <div class="item">
+
+                    <strong>
+                        Essentials DBMS
+                    </strong>
+
+                    <span>
+                        Udemy — 2025
+                    </span>
+
+                </div>
+
+
+                <div class="item">
+
+                    <strong>
+                        Git Training
+                    </strong>
+
+                    <span>
+                        Simplilearn SkillUp — 2025
+                    </span>
+
+                </div>
+
+
+                <div class="item">
+
+                    <strong>
+                        Introduction to SQL
+                    </strong>
+
+                    <span>
+                        Simplilearn SkillUp — 2025
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LEADERSHIP
+             ========================= -->
+
+        <section>
+
+            <h2 class="section-title">
+                Leadership & Activities
+            </h2>
+
+            <p class="section-subtitle">
+                Teamwork, leadership and technical activities
+            </p>
+
+            <div class="two-column">
+
+                <div class="card">
+
+                    <h3>
+                        Team Lead
+                    </h3>
+
+                    <p>
+                        Team Lead for multiple academic and personal
+                        technical projects.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Event Organizer
+                    </h3>
+
+                    <p>
+                        Organized the "Crack Me" CTF competition.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Coordinator
+                    </h3>
+
+                    <p>
+                        Coordinator for the ASHV Discipline Community.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+             ========================= -->
+
+        <section id="contact">
+
+            <h2 class="section-title">
+                Contact
+            </h2>
+
+            <p class="section-subtitle">
+                Let's connect
+            </p>
+
+            <div class="contact-grid">
+
+                <a
+                    class="contact-link"
+                    href="mailto:mrkaif1309@gmail.com"
+                >
+                    <span class="contact-label">
+                        EMAIL
+                    </span>
+
+                    mrkaif1309@gmail.com
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="https://github.com/kafkakaif"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span class="contact-label">
+                        GITHUB
+                    </span>
+
+                    github.com/kafkakaif
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="https://www.linkedin.com/in/mohammed-kaif-157a35324/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span class="contact-label">
+                        LINKEDIN
+                    </span>
+
+                    Mohammed Kaif
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="https://www.tryhackme.com/p/mrkaif1309"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span class="contact-label">
+                        TRYHACKME
+                    </span>
+
+                    mrkaif1309
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FOOTER
+             ========================= -->
+
+        <footer>
+
+            © 2026 KONDAKAMARLA MOHAMMED KAIF
+            <br>
+            Full Stack Developer • AI/ML • Cybersecurity
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
